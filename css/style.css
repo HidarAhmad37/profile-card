@@ -1,0 +1,116 @@
+@font-face {
+    font-family: reg;
+    src: url("./../Fonts/KumbhSans-Regular.ttf");
+}
+@font-face {
+    font-family: bol;
+    src: url("./../Fonts/KumbhSans-Bold.ttf");
+}
+@font-face {
+    font-family: light;
+    src: url("./../Fonts/KumbhSans-Light.ttf");
+}
+:root{
+    --dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 90%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 18px;
+    background-color: var(--dark-cyan);
+    background-image: url("./../images/bg-pattern-top.svg"), url("./../images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat,no-repeat;
+    background-position: -330px -550px, 580px 300px;
+}
+/* Utilites */
+ul{
+    list-style-type: none;
+}
+h3{
+    color: var(--Very-dark-desaturated-blue);
+    font-family: bol;
+}
+p{
+    color: var(--Dark-grayish-blue);
+    font-family: reg;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* Card */
+.card{
+    border-radius: 10px;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* Card-header */
+.card .header-img{
+    /* border: 1px solid yellow; */
+    overflow: hidden;
+    width: 100%;
+}
+.card .header-img img{
+    border-radius: 10px 10px 0 0;
+}
+/* Card-Body */
+.card-body{
+    width: 100%;
+    background-color: #ffffff;
+}
+.card-body .user-img img{
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    position: relative;
+    top: -50px;
+}
+.card-body .card-text{
+    /* border: 1px solid black; */
+    position: relative;
+    top: -40px;
+}
+.card-body .user-age{
+    font-family: light;   
+    color: var(--Dark-grayish-blue);
+}
+.card-text .user-country{
+    padding-top: 10px;
+} 
+/* Card-footer */
+.card-footer{
+    width: 100%;
+    border-top: 1px solid var(--Dark-gray);
+    background-color: #ffffff;
+    justify-content: space-around;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+}
+.card-footer .footer-number .number-title{
+    font-family: light;   
+    color: var(--Dark-grayish-blue);    
+    font-size: 10px;
+    padding: 5px;
+}
+
+/* Meida Query */
+@media (max-width:375px){
+    body{
+    background-position: -815px -550px, 200px 150px;
+    }
+}
